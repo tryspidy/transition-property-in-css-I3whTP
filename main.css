@@ -1,0 +1,41 @@
+/* 
+To create a transition effect, you must specify three things:
+  transition: (transition-property) (transition-duration) (transition-delay) (transition-timing-function)
+  transition: all 0.5s ease-out
+
+transition-property:
+    Specifies the name of the CSS property the transition effect is for, by default it's none
+    the property could be: width, height, background-color, color, font-size, opacity etc, by applying "all" keyword, it applies on all properties
+    transition-property: background-color; --> aply on background only
+    transition-property: all; --> apply on all
+
+transition-duration:
+    Specifies how many seconds or milliseconds a transition effect takes to complete
+    
+transition-delay:
+    Specifies a delay (in seconds) for the transition effect
+
+transition-timing-function property
+    ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+    ease-in - specifies a transition effect with a slow start
+    ease-out - specifies a transition effect with a slow end
+    ease-in-out - specifies a transition effect with a slow start and end
+*/
+
+/* transition scale example*/
+.trans_scale {
+    transition-delay: 0s;
+    transition-property: box-shadow, background-color, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    /* OR */
+    /* transition: all 0.3s 0s ease-out; */
+    /* transition: 0.3s;
+  /* transition: transform 0.5s; */
+}
+
+.trans_scale:hover {
+    transform: scale(1.02, 1.03);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    background-color: #f2efe3ff;
+}
